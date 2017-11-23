@@ -1,0 +1,314 @@
+[
+    {
+        "outputFile": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 49,
+                    "endOffset": 100
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 50,
+                    "endOffset": 151
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 156,
+                    "endColumn": 37,
+                    "endOffset": 189
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 194,
+                    "endColumn": 43,
+                    "endOffset": 233
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 238,
+                    "endColumn": 42,
+                    "endOffset": 276
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 281,
+                    "endColumn": 42,
+                    "endOffset": 319
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 324,
+                    "endColumn": 46,
+                    "endOffset": 366
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 371,
+                    "endColumn": 44,
+                    "endOffset": 411
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 416,
+                    "endColumn": 46,
+                    "endOffset": 458
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 463,
+                    "endColumn": 44,
+                    "endOffset": 503
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 508,
+                    "endColumn": 42,
+                    "endOffset": 546
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 551,
+                    "endColumn": 55,
+                    "endOffset": 602
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 607,
+                    "endColumn": 59,
+                    "endOffset": 662
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 667,
+                    "endColumn": 57,
+                    "endOffset": 720
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 725,
+                    "endColumn": 51,
+                    "endOffset": 772
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 777,
+                    "endColumn": 53,
+                    "endOffset": 826
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 831,
+                    "endColumn": 85,
+                    "endOffset": 912
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 917,
+                    "endColumn": 85,
+                    "endOffset": 998
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1003,
+                    "endColumn": 91,
+                    "endOffset": 1090
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1095,
+                    "endColumn": 54,
+                    "endOffset": 1145
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1150,
+                    "endColumn": 90,
+                    "endOffset": 1236
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1241,
+                    "endColumn": 33,
+                    "endOffset": 1270
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1275,
+                    "endColumn": 37,
+                    "endOffset": 1308
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1313,
+                    "endColumn": 46,
+                    "endOffset": 1355
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1360,
+                    "endColumn": 63,
+                    "endOffset": 1419
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1853,
+                        "endColumn": 63,
+                        "endOffset": 1912
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69f171e9c210378dd241a02aecedc2e87dcb8de6">
+        <dex dex="/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6ca45d389d3fc45dd0f2a32626ea42fc51a6dfeb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6fd4ede646a745322e062f7ba2d6bcce2de099a/classes.dex" />
+    </item>
+
+</items>
