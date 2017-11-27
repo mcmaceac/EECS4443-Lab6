@@ -290,6 +290,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 		private long elapsedTime;
 		private int trials;
 		private long[] timeEachTrial;
+		private String participantCode, sessionCode, groupCode, conditionCode;
 
 		private Bundle restoreBundle;
 
@@ -1025,7 +1026,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 			if (totalTries >= trials) {
 				Context context = getContext();
 				Intent i = new Intent(context, Results.class);
-				Bundle b = new Bundle();
+				Bundle b = restoreBundle;
 				b.putString("time", timeString(calculateMeanTrialTime()));
 				b.putInt("trials", trials);
 				b.putInt("wins", totalWins);
@@ -1059,6 +1060,10 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				result = "Hard";
 			}
 			return result;
+		}
+
+		public void setTestInfo (Bundle e) {
+			restoreBundle = e;
 		}
 	} // end LunarThread class definition
 }

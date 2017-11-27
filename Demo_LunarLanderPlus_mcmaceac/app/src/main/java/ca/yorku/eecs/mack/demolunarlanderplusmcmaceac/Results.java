@@ -3,16 +3,32 @@ package ca.yorku.eecs.mack.demolunarlanderplusmcmaceac;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.Locale;
 
 /**
  * Created by mcmaceac on 2017-10-23.
  */
 
 public class Results extends Activity {
+    final String SD1_HEADER = "App,Participant,Session,Block,Group,Condition,Trials,Difficulty";
+    final String APP = "LunarLander";
+    final String WORKING_DIRECTORY = "/LunarData/";
+
+
+    public BufferedWriter sd1;
+    public File f1;
+    public String sd1Leader;
+
     @Override
     public void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +39,10 @@ public class Results extends Activity {
         String difficulty = b.getString("difficulty");
         String time = b.getString("time");
         int wins = b.getInt("wins");
+        String participantCode = b.getString("participant");
+        String sessionCode = b.getString("session");
+        String groupCode = b.getString("group");
+        String conditionCode = b.getString("condition");
 
         TextView trialsTV = (TextView) findViewById(R.id.paramTrials);
         TextView difficultyTV = (TextView) findViewById(R.id.paramDifficulty);
@@ -34,6 +54,57 @@ public class Results extends Activity {
         timeTV.setText("Time = " + time + " (mean/trial)");
         winsTV.setText("Wins = " + wins);
 
+        File dataDirectory = new File(Environment.getExternalStorageDirectory() + WORKING_DIRECTORY);
+        if (!dataDirectory.exists() && !dataDirectory.mkdirs())
+        {
+            Log.e("MYDEBUG", "ERROR --> FAILED TO CREATE DIRECTORY: " + WORKING_DIRECTORY);
+            super.onDestroy(); // cleanup
+            this.finish(); // terminate
+        }
+        try {
+            dataDirectory.createNewFile();
+        } catch (IOException e) {}
+
+        int blockNumber = 0;
+        do {
+            ++blockNumber;
+            String blockCode = String.format(Locale.CANADA, "B%02d", blockNumber);
+            String baseFileName = String.format("%s-%s-%s-%s-%s-%s-%s", APP, participantCode, sessionCode,
+                    blockCode, groupCode, conditionCode, difficulty);
+            f1 = new File(dataDirectory, baseFileName + ".sd2");
+            sd1Leader = String.format("%s,%s,%s,%s,%s,%s,%s", APP, participantCode, sessionCode,
+                    blockCode, groupCode, conditionCode, difficulty);
+        } while (f1.exists());
+
+
+
+        Log.i("MYDEBUG", "Working directory=" + dataDirectory);
+
+
+        try {
+            sd1 = new BufferedWriter(new FileWriter(f1));
+        } catch (IOException e) {
+            Log.e("MYDEBUG", "ERROR OPENING DATA FILES! e=" + e.toString());
+            super.onDestroy();
+            this.finish();
+        }
+
+        StringBuilder sd1Data = new StringBuilder(100);
+        sd1Data.append(String.format("%s,", sd1Leader));
+        sd1Data.append(String.format(Locale.CANADA, "%d,", trials));
+        sd1Data.append(String.format(Locale.CANADA, "%d,", wins));
+        sd1Data.append(String.format("%s,", time));
+
+        try {
+            sd1.write(SD1_HEADER, 0, SD1_HEADER.length());
+            sd1.flush();
+            sd1.write(sd1Data.toString(), 0, sd1Data.length());
+            sd1.flush();
+        } catch (IOException e) {
+            Log.e("MYDEBUG", "ERROR WRITING TO DATA FILE!\n" + e);
+            super.onDestroy();
+            this.finish();
+        }
     }
 
     // called when the "Results" button is pressed

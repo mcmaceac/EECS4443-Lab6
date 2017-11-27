@@ -293,6 +293,7 @@ public class DemoLunarLanderPlusmcmaceacActivity extends Activity implements Vie
                 lunarThread.setDifficulty(LunarThread.DIFFICULTY_HARD);
             }
             lunarThread.setNumberOfTrials(extras.getInt("numberOfTrials"));
+            lunarThread.setTestInfo(extras);
 
         }
     }

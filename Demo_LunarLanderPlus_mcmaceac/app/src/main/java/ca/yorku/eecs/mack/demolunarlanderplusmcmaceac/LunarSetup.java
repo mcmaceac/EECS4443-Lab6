@@ -138,11 +138,11 @@ public class LunarSetup extends Activity implements View.OnClickListener
 
             // package the user's choices in a bundle
             Bundle b = new Bundle();
-            b.putString("participantCode", part);
-            b.putString("sessionCode", sess);
-            b.putString("blockCode", block);
-            b.putString("groupCode", group);
-            b.putString("conditionCode", cond);
+            b.putString("participant", part);
+            b.putString("session", sess);
+            b.putString("block", block);
+            b.putString("group", group);
+            b.putString("condition", cond);
             b.putInt("numberOfTrials", num);
             b.putString("difficulty", difficultySetting);
 
