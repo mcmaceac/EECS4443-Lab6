@@ -14,6 +14,7 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".Results"></activity>
         <activity
             android:name=".LunarSetup">
             <intent-filter>

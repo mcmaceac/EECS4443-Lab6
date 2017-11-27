@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\mack\Desktop\Scott-new\Java\AndroidStudioStuff\Demo_LunarLanderPlus\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="D:\School\EECS4443\EECS4443-Lab6\Demo_LunarLanderPlus\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\mack\Desktop\Scott-new\Java\AndroidStudioStuff\Demo_LunarLanderPlus\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3bda38ede2b948e4c09973095ba9f1cd199e1d20\classes.dex" />
+        <dex dex="D:\School\EECS4443\EECS4443-Lab6\Demo_LunarLanderPlus\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_bc91921925808f8b3a3fd07efba0e21a53c0d452\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\mack\Desktop\Scott-new\Java\AndroidStudioStuff\Demo_LunarLanderPlus\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="D:\School\EECS4443\EECS4443-Lab6\Demo_LunarLanderPlus\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c808cc3151b4012c761f32930b551c78005ac3c4">
-        <dex dex="C:\Users\mack\Desktop\Scott-new\Java\AndroidStudioStuff\Demo_LunarLanderPlus\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_40acf8e4152b8647bb6acc0d785120c15a29bcbd\classes.dex" />
+        sha1="2b29d982c9d54f371aa53d4f49d6599bdafee567">
+        <dex dex="D:\School\EECS4443\EECS4443-Lab6\Demo_LunarLanderPlus\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_846c9f176d06d44ad14570276b6e682e3d32769d\classes.dex" />
     </item>
 
 </items>

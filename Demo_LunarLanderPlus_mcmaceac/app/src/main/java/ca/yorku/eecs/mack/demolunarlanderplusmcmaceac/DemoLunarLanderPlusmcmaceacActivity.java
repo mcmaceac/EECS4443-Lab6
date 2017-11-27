@@ -276,6 +276,24 @@ public class DemoLunarLanderPlusmcmaceacActivity extends Activity implements Vie
         {
             // Log.i(MYDEBUG, "onWindowFocusChanged (has focus)!");
             lunarThread = lunarView.getThread();
+
+            Bundle extras = getIntent().getExtras();
+            String difficulty = extras.getString("difficulty");
+
+            if (difficulty.equals("Easy")) {
+                Log.i("MYDEBUG", "Difficulty is set to: " + difficulty);
+                lunarThread.setDifficulty(LunarThread.DIFFICULTY_EASY);
+            }
+            else if (difficulty.equals("Medium")) {
+                Log.i("MYDEBUG", "Difficulty is set to: " + difficulty);
+                lunarThread.setDifficulty(LunarThread.DIFFICULTY_MEDIUM);
+            }
+            else if (difficulty.equals("Hard")) {
+                Log.i("MYDEBUG", "Difficulty is set to: " + difficulty);
+                lunarThread.setDifficulty(LunarThread.DIFFICULTY_HARD);
+            }
+            lunarThread.setNumberOfTrials(extras.getInt("numberOfTrials"));
+
         }
     }
 

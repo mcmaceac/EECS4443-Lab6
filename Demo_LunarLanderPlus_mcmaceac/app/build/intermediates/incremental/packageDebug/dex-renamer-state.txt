@@ -1,7 +1,7 @@
-#Thu Nov 23 12:51:14 EST 2017
-base.0=/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6ca45d389d3fc45dd0f2a32626ea42fc51a6dfeb
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6fd4ede646a745322e062f7ba2d6bcce2de099a/classes.dex
-base.1=/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6fd4ede646a745322e062f7ba2d6bcce2de099a
-file.0=/Users/mcmaceac/Documents/School/EECS4443/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6ca45d389d3fc45dd0f2a32626ea42fc51a6dfeb/classes.dex
+#Sun Nov 26 20:19:03 EST 2017
+base.0=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d7221f8112048c5e3942a070fec4e045ccc8ed6b
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a1686fea958cd872c327c91be375597a4d434c4c\\classes.dex
+base.1=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a1686fea958cd872c327c91be375597a4d434c4c
+file.0=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d7221f8112048c5e3942a070fec4e045ccc8ed6b\\classes.dex

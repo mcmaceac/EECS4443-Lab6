@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.util.Log;
 
 @SuppressWarnings("unused")
 public class LunarSetup extends Activity implements View.OnClickListener
@@ -48,7 +49,7 @@ public class LunarSetup extends Activity implements View.OnClickListener
     private Spinner spinParticipantCode;
     private Spinner spinSessionCode, spinGroupCode;
     private Spinner spinNumberOfTrials, spinDifficulty;
-    private Spinner spinConditionCode;
+    private Spinner spinConditionCode, spinBlockCode;
     // end set up parameters
 
     /**
@@ -66,7 +67,7 @@ public class LunarSetup extends Activity implements View.OnClickListener
         // overwrite 1st entry from shared preferences, if corresponding value exits
         participantCode[0] = sp.getString("participantCode", participantCode[0]);
         sessionCode[0] = sp.getString("sessionCode", sessionCode[0]);
-        // block code initialized in main activity (based on existing filenames)
+        blockCode[0] = sp.getString("blockCode", blockCode[0]);
         groupCode[0] = sp.getString("groupCode", groupCode[0]);
         conditionCode[0] = sp.getString("conditionCode", conditionCode[0]);
         numberOfTrials[0] = sp.getString("numberOfPhrases", numberOfTrials[0]);
@@ -76,7 +77,7 @@ public class LunarSetup extends Activity implements View.OnClickListener
         // get references to widgets in setup dialog
         spinParticipantCode = (Spinner)findViewById(R.id.spinParticipantCode);
         spinSessionCode = (Spinner)findViewById(R.id.spinSessionCode);
-        Spinner spinBlockCode = (Spinner)findViewById(R.id.spinBlockCode);
+        spinBlockCode = (Spinner)findViewById(R.id.spinBlockCode);
         spinGroupCode = (Spinner)findViewById(R.id.spinGroupCode);
         spinConditionCode = (Spinner)findViewById(R.id.conditionCode);
         spinNumberOfTrials = (Spinner)findViewById(R.id.numberOfTrials);
@@ -129,7 +130,7 @@ public class LunarSetup extends Activity implements View.OnClickListener
             // get user's choices
             String part = participantCode[spinParticipantCode.getSelectedItemPosition()];
             String sess = sessionCode[spinSessionCode.getSelectedItemPosition()];
-            // String block = blockCode[spinBlock.getSelectedItemPosition()];
+            String block = blockCode[spinBlockCode.getSelectedItemPosition()];
             String group = groupCode[spinGroupCode.getSelectedItemPosition()];
             String cond = conditionCode[spinConditionCode.getSelectedItemPosition()];
             int num = Integer.parseInt(numberOfTrials[spinNumberOfTrials.getSelectedItemPosition()]);
@@ -139,7 +140,7 @@ public class LunarSetup extends Activity implements View.OnClickListener
             Bundle b = new Bundle();
             b.putString("participantCode", part);
             b.putString("sessionCode", sess);
-            // b.putString("blockCode", block);
+            b.putString("blockCode", block);
             b.putString("groupCode", group);
             b.putString("conditionCode", cond);
             b.putInt("numberOfTrials", num);
@@ -157,6 +158,7 @@ public class LunarSetup extends Activity implements View.OnClickListener
             spe.putString("participantCode", participantCode[spinParticipantCode.getSelectedItemPosition()]);
             spe.putString("sessionCode", sessionCode[spinSessionCode.getSelectedItemPosition()]);
             spe.putString("groupCode", groupCode[spinGroupCode.getSelectedItemPosition()]);
+            spe.putString("blockCode", blockCode[spinBlockCode.getSelectedItemPosition()]);
             spe.putString("conditionCode", conditionCode[spinConditionCode.getSelectedItemPosition()]);
             spe.putString("numberOfTrials", numberOfTrials[spinNumberOfTrials.getSelectedItemPosition()]);
             spe.putString("difficulty", difficulty[spinDifficulty.getSelectedItemPosition()]);

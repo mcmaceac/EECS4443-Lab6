@@ -18,6 +18,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
+        <activity android:name="ca.yorku.eecs.mack.demolunarlanderplusmcmaceac.Results" />
         <activity android:name="ca.yorku.eecs.mack.demolunarlanderplusmcmaceac.LunarSetup" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

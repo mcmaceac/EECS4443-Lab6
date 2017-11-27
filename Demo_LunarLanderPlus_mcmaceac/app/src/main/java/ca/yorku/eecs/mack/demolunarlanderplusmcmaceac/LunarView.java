@@ -1,6 +1,7 @@
 package ca.yorku.eecs.mack.demolunarlanderplusmcmaceac;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,6 +20,8 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Arrays;
 
 /**
  * View that draws for a simple LunarLander game.
@@ -285,6 +288,8 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 		private int totalWins, winsInARow;
 		private int totalTries;
 		private long elapsedTime;
+		private int trials;
+		private long[] timeEachTrial;
 
 		private Bundle restoreBundle;
 
@@ -563,6 +568,13 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 			}
 		}
 
+		public void setNumberOfTrials(int numTrials) {
+			synchronized (surfaceHolder) {
+				trials = numTrials;
+				timeEachTrial = new long[trials];
+			}
+		}
+
 		/**
 		 * Sets if the engine is currently firing.
 		 */
@@ -797,7 +809,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 			canvas.drawRect(scratchRect, fillPaint);
 
 			// draw fuel gauge label
-			canvas.drawText("Fuel", hGap, 4 + barHeight + TEXT_SIZE, resultsPaint);
+			canvas.drawText("Fuel", hGap, 25 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// draw the speed gauge, with a two-tone effect
 			double speed = Math.sqrt(dx * dx + dy * dy);
@@ -816,19 +828,19 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				scratchRect.set(hGap + barWidth + hGap, 4, hGap + barWidth + hGap + goalWidth, 4 + barHeight);
 				canvas.drawRect(scratchRect, fillPaint);
 			}
-			canvas.drawText("Speed", hGap + barWidth + hGap, 4 + barHeight + TEXT_SIZE, resultsPaint);
+			canvas.drawText("Speed", hGap + barWidth + hGap, 25 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// wins
-			canvas.drawText("" + totalWins, 0.70f * canvasWidth, 4 + TEXT_SIZE, resultsPaint);
-			canvas.drawText("Wins", 0.70f * canvasWidth, 4 + barHeight + TEXT_SIZE, resultsPaint);
+			canvas.drawText("" + totalWins, 0.70f * canvasWidth, 25 + TEXT_SIZE, resultsPaint);
+			canvas.drawText("Wins", 0.70f * canvasWidth, 25 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// tries
-			canvas.drawText("" + totalTries, 0.80f * canvasWidth, 4 + TEXT_SIZE, resultsPaint);
-			canvas.drawText("Tries", 0.80f * canvasWidth, 4 + barHeight + TEXT_SIZE, resultsPaint);
+			canvas.drawText("" + totalTries + "/" + trials, 0.80f * canvasWidth, 25 + TEXT_SIZE, resultsPaint);
+			canvas.drawText("Tries", 0.80f * canvasWidth, 25 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// time
-			canvas.drawText(timeString(elapsedTime), 0.90f * canvasWidth, 4 + TEXT_SIZE, resultsPaint);
-			canvas.drawText("Time", 0.90f * canvasWidth, 4 + barHeight + TEXT_SIZE, resultsPaint);
+			canvas.drawText(timeString(elapsedTime), 0.90f * canvasWidth, 25 + TEXT_SIZE, resultsPaint);
+			canvas.drawText("Time", 0.90f * canvasWidth, 25 + barHeight + TEXT_SIZE, resultsPaint);
 
 			// Draw the landing pad
 			canvas.drawLine(landingPadX, canvasHeight - landingPadHeight / 2, landingPadX + landingPadWidth,
@@ -993,6 +1005,8 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 					winsInARow++;
 					++totalWins;
 				}
+                Log.i("MYDEBUG", "time logged at index[" + (totalTries) + "]: " + timeString(elapsedTime));
+				timeEachTrial[totalTries] = elapsedTime;
 				++totalTries;
 				setState(result, message);
 			}
@@ -1001,9 +1015,50 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 			{
 				message = res.getText(R.string.message_off_screen);
 				int result = STATE_LOSE;
+				Log.i("MYDEBUG", "time logged at index[" + (totalTries) + "]: " + timeString(elapsedTime));
+				timeEachTrial[totalTries] = elapsedTime;
 				++totalTries;
 				setState(result, message);
 			}
+
+			//participant has completed the number of trials
+			if (totalTries >= trials) {
+				Context context = getContext();
+				Intent i = new Intent(context, Results.class);
+				Bundle b = new Bundle();
+				b.putString("time", timeString(calculateMeanTrialTime()));
+				b.putInt("trials", trials);
+				b.putInt("wins", totalWins);
+				b.putString("difficulty", getDifficultyString());
+				i.putExtras(b);
+				context.startActivity(i);
+			}
+
 		} // end updatePhysics
+
+		private long calculateMeanTrialTime() {
+			long result = 0;
+
+			for (int i = 0; i < trials; i++) {
+				result += timeEachTrial[i];
+			}
+
+			return result / trials;
+		}
+
+		private String getDifficultyString() {
+			String result = "";
+
+			if (difficulty == DIFFICULTY_EASY) {
+				result = "Easy";
+			}
+			else if (difficulty == DIFFICULTY_MEDIUM) {
+				result = "Medium";
+			}
+			else if (difficulty == DIFFICULTY_HARD) {
+				result = "Hard";
+			}
+			return result;
+		}
 	} // end LunarThread class definition
 }

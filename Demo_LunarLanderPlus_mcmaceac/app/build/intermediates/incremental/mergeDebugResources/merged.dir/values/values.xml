@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">LL+_mcmaceac</string>
     <string name="buttonText">Button Text</string>
+    <string name="buttonexittext">Exit</string>
+    <string name="buttonsetuptext">Setup</string>
     <string name="exit">Exit</string>
     <string name="lunar_layout_text_text"/>
     <string name="menu_easy">Easy</string>
@@ -22,6 +24,7 @@
     <string name="mode_win_prefix">Success!\n</string>
     <string name="mode_win_suffix">in a row\nPress Up to Play\nPress Down to Exit</string>
     <string name="ok">Ok</string>
+    <string name="resultstitletext">Results</string>
     <string name="save">Save</string>
     <string name="setup_subtitle">LL+</string>
     <string name="setup_title">LL+ mcmaceac Parameters</string>

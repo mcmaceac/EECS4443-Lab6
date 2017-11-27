@@ -1,7 +1,7 @@
-#Tue Aug 22 13:25:03 EDT 2017
-base.0=C\:\\Users\\mack\\Desktop\\Scott-new\\Java\\AndroidStudioStuff\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3bda38ede2b948e4c09973095ba9f1cd199e1d20
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\mack\\Desktop\\Scott-new\\Java\\AndroidStudioStuff\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_40acf8e4152b8647bb6acc0d785120c15a29bcbd\\classes.dex
-base.1=C\:\\Users\\mack\\Desktop\\Scott-new\\Java\\AndroidStudioStuff\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_40acf8e4152b8647bb6acc0d785120c15a29bcbd
-file.0=C\:\\Users\\mack\\Desktop\\Scott-new\\Java\\AndroidStudioStuff\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3bda38ede2b948e4c09973095ba9f1cd199e1d20\\classes.dex
+#Fri Nov 17 22:28:22 EST 2017
+base.0=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_bc91921925808f8b3a3fd07efba0e21a53c0d452
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_846c9f176d06d44ad14570276b6e682e3d32769d\\classes.dex
+base.1=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_846c9f176d06d44ad14570276b6e682e3d32769d
+file.0=D\:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_bc91921925808f8b3a3fd07efba0e21a53c0d452\\classes.dex

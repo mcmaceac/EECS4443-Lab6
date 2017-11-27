@@ -42,5 +42,8 @@
     <string name="ok">Ok</string>
     <string name="save">Save</string>
     <string name="exit">Exit</string>
+    <string name="resultstitletext">Results</string>
+    <string name="buttonsetuptext">Setup</string>
+    <string name="buttonexittext">Exit</string>
 
 </resources>
