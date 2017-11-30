@@ -2,6 +2,7 @@ package ca.yorku.eecs.mack.demolunarlanderplusmcmaceac;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaScannerConnection;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -105,6 +106,9 @@ public class Results extends Activity {
             super.onDestroy();
             this.finish();
         }
+
+        //refreshes the file in explorer
+        MediaScannerConnection.scanFile(this, new String[]{f1.getAbsolutePath()}, null, null);
     }
 
     // called when the "Results" button is pressed
