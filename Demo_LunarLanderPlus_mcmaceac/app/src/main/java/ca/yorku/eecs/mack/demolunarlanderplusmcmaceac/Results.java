@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.io.BufferedWriter;
@@ -20,7 +21,7 @@ import java.util.Locale;
  * Created by mcmaceac on 2017-10-23.
  */
 
-public class Results extends Activity {
+public class Results extends Activity implements View.OnClickListener {
     final String SD1_HEADER = "App,Participant,Session,Block,Group,Condition,Trials,Difficulty";
     final String APP = "LunarLander";
     final String WORKING_DIRECTORY = "/LunarData/";
@@ -29,30 +30,82 @@ public class Results extends Activity {
     public BufferedWriter sd1;
     public File f1;
     public String sd1Leader;
+    public ImageButton left, right;
+    public TextView title, fuelRemainingTV, trialsTV, timeTV;
+    public int trials;
+    public int index = 0;
+    public String difficulty, meanTime, meanFuel;
+    public double[] fuelRemainingEachTrial;
+    public long[] timeEachTrial;
+
+    @Override
+    public void onClick(View v) {
+
+        if (trials > 1) {
+
+            if (v == left) {
+                if (index == 0) {
+                    index = trials;
+                } else {
+                    index--;
+                }
+            } else if (v == right) {
+                if (index == trials) {
+                    index = 0;
+                } else {
+                    index++;
+                }
+            }
+
+            if (index == 0) {
+                title.setText("Results Summary");
+                timeTV.setText("Time = " + meanTime + " (mean/trial)");
+                fuelRemainingTV.setText("Remaining Fuel = " + meanFuel + " (mean/trial)");
+
+            }
+            else {
+                title.setText("Trial#: " + index);
+                timeTV.setText("Time = " + timeString(timeEachTrial[index - 1]));
+                fuelRemainingTV.setText("Remaining Fuel = " + String.format("%.2f", fuelRemainingEachTrial[index -1]));
+            }
+        }
+    }
 
     @Override
     public void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results);
 
+        right = (ImageButton)findViewById(R.id.buttonRight);
+        left = (ImageButton)findViewById(R.id.buttonLeft);
+
+        right.setOnClickListener(this);
+        left.setOnClickListener(this);
+
         Bundle b = getIntent().getExtras();
-        int trials = b.getInt("trials");
-        String difficulty = b.getString("difficulty");
-        String time = b.getString("time");
+        trials = b.getInt("trials");
+        difficulty = b.getString("difficulty");
+        meanTime = b.getString("time");
+        meanFuel = b.getString("meanFuel");
+        fuelRemainingEachTrial = b.getDoubleArray("fuel");
+        timeEachTrial = b.getLongArray("timeEachTrial");
         int wins = b.getInt("wins");
         String participantCode = b.getString("participant");
         String sessionCode = b.getString("session");
         String groupCode = b.getString("group");
         String conditionCode = b.getString("condition");
 
-        TextView trialsTV = (TextView) findViewById(R.id.paramTrials);
+        trialsTV = (TextView) findViewById(R.id.paramTrials);
         TextView difficultyTV = (TextView) findViewById(R.id.paramDifficulty);
-        TextView timeTV = (TextView) findViewById(R.id.paramTime);
+        timeTV = (TextView) findViewById(R.id.paramTime);
+        fuelRemainingTV = (TextView) findViewById(R.id.paramFuel);
         TextView winsTV = (TextView) findViewById(R.id.paramWins);
+        title = (TextView) findViewById(R.id.resultsTitle);
 
         trialsTV.setText("Trials = " + trials);
         difficultyTV.setText("Difficulty = " + difficulty);
-        timeTV.setText("Time = " + time + " (mean/trial)");
+        timeTV.setText("Time = " + meanTime + " (mean/trial)");
+        fuelRemainingTV.setText("Remaining Fuel = " + meanFuel + " (mean/trial)");
         winsTV.setText("Wins = " + wins);
 
         File dataDirectory = new File(Environment.getExternalStorageDirectory() + WORKING_DIRECTORY);
@@ -94,7 +147,7 @@ public class Results extends Activity {
         sd1Data.append(String.format("%s,", sd1Leader));
         sd1Data.append(String.format(Locale.CANADA, "%d,", trials));
         sd1Data.append(String.format(Locale.CANADA, "%d,", wins));
-        sd1Data.append(String.format("%s,", time));
+        sd1Data.append(String.format("%s,", meanTime));
 
         try {
             sd1.write(SD1_HEADER, 0, SD1_HEADER.length());
@@ -123,5 +176,20 @@ public class Results extends Activity {
         super.onDestroy(); // cleanup
         this.finish(); // terminate
         //System.exit(0);
+    }
+
+    private String timeString(long elapsedTime)
+    {
+        StringBuilder time = new StringBuilder();
+        int minutes = (int)(elapsedTime / 1000) / 60;
+        int seconds = (int)(elapsedTime / 1000) - (minutes * 60);
+        int tenths = (int)(elapsedTime / 10) % 10;
+        time.append(minutes + ":");
+        if (seconds < 10)
+            time.append("0" + seconds);
+        else
+            time.append(seconds);
+        time.append("." + tenths);
+        return time.toString();
     }
 }

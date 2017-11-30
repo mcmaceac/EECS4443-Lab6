@@ -70,7 +70,7 @@ public class LunarSetup extends Activity implements View.OnClickListener
         blockCode[0] = sp.getString("blockCode", blockCode[0]);
         groupCode[0] = sp.getString("groupCode", groupCode[0]);
         conditionCode[0] = sp.getString("conditionCode", conditionCode[0]);
-        numberOfTrials[0] = sp.getString("numberOfPhrases", numberOfTrials[0]);
+        numberOfTrials[0] = sp.getString("numberOfTrials", numberOfTrials[0]);
         difficulty[0] = sp.getString("difficulty", difficulty[0]);
 
 

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lunar_layout.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\src\\main\\res\\layout\\lunar_layout.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/res/merged/debug/layout/results.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/layout/results.xml"
     },
     {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\setup.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\src\\main\\res\\layout\\setup.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/res/merged/debug/layout/lunar_layout.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/layout/lunar_layout.xml"
     },
     {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinnerstyle.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\src\\main\\res\\layout\\spinnerstyle.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/res/merged/debug/layout/setup.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/layout/setup.xml"
     },
     {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\results.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab6\\Demo_LunarLanderPlus_mcmaceac\\app\\src\\main\\res\\layout\\results.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/res/merged/debug/layout/spinnerstyle.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/layout/spinnerstyle.xml"
     }
 ]

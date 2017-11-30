@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/res/merged/debug/drawable-xxhdpi/left.png",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/drawable-xxhdpi/left.png"
+    },
+    {
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/build/intermediates/res/merged/debug/drawable-xxhdpi/right.png",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab6/Demo_LunarLanderPlus_mcmaceac/app/src/main/res/drawable-xxhdpi/right.png"
+    }
+]

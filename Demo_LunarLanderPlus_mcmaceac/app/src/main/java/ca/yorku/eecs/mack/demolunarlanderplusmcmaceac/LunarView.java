@@ -290,6 +290,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 		private long elapsedTime;
 		private int trials;
 		private long[] timeEachTrial;
+		private double[] fuelRemainingEachTrial;
 		private String participantCode, sessionCode, groupCode, conditionCode;
 
 		private Bundle restoreBundle;
@@ -573,6 +574,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 			synchronized (surfaceHolder) {
 				trials = numTrials;
 				timeEachTrial = new long[trials];
+				fuelRemainingEachTrial = new double[trials];
 			}
 		}
 
@@ -1008,6 +1010,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				}
                 Log.i("MYDEBUG", "time logged at index[" + (totalTries) + "]: " + timeString(elapsedTime));
 				timeEachTrial[totalTries] = elapsedTime;
+				fuelRemainingEachTrial[totalTries] = fuel;
 				++totalTries;
 				setState(result, message);
 			}
@@ -1018,6 +1021,7 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				int result = STATE_LOSE;
 				Log.i("MYDEBUG", "time logged at index[" + (totalTries) + "]: " + timeString(elapsedTime));
 				timeEachTrial[totalTries] = elapsedTime;
+				fuelRemainingEachTrial[totalTries] = fuel;
 				++totalTries;
 				setState(result, message);
 			}
@@ -1027,15 +1031,28 @@ class LunarView extends SurfaceView implements SurfaceHolder.Callback
 				Context context = getContext();
 				Intent i = new Intent(context, Results.class);
 				Bundle b = restoreBundle;
+				b.putDoubleArray("fuel", fuelRemainingEachTrial);
 				b.putString("time", timeString(calculateMeanTrialTime()));
+				b.putString("meanFuel", String.format("%.2f", calculateMeanFuelRemaining()));
+				b.putLongArray("timeEachTrial", timeEachTrial);
 				b.putInt("trials", trials);
 				b.putInt("wins", totalWins);
 				b.putString("difficulty", getDifficultyString());
 				i.putExtras(b);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				context.startActivity(i);
 			}
 
 		} // end updatePhysics
+
+		private double calculateMeanFuelRemaining() {
+			double result = 0.0;
+
+			for (int i = 0; i < trials; i++) {
+				result += fuelRemainingEachTrial[i];
+			}
+			return result;
+		}
 
 		private long calculateMeanTrialTime() {
 			long result = 0;
